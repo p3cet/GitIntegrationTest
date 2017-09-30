@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewMessage</title>
+</head>
+<body>
+    <div>
+        <label>Inside view: </label><br>
+        <label>Message is set to: </label> @ViewBag.MessageText
+        <br>
+        @Html.ActionLink("Back to index", "Index")
+        
+    </div>
+</body>
+</html>
