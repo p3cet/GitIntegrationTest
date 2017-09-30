@@ -9,16 +9,17 @@ namespace SingletonTest.Controllers
 {
     public class MessageController : Controller
     {
+        Message CurrentMessage = Message.Instance;
+
         // GET: Message
         public ActionResult Index()
         {
-            Message CurrentMessage = Message.Instance;
             return View();
         }
 
         public ActionResult ViewMessage() 
         {
-            ViewBag.MessageText = Message.MessageText;
+            ViewBag.MessageText = CurrentMessage.MessageText;
             return View();
         }
 
@@ -26,8 +27,8 @@ namespace SingletonTest.Controllers
 
         public ActionResult SetMessage(string text)
         {
-            Message.MessageText = text;
-            ViewBag.MessageText = Message.MessageText;
+            CurrentMessage.MessageText = text;
+            ViewBag.MessageText = CurrentMessage.MessageText;
             return View();
         }
     }

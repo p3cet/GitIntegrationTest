@@ -17,14 +17,14 @@ namespace SingletonTest.Models
             }
         }
 
-        public static string MessageText
+        public string MessageText
         {
             get => messageText;
             set => messageText = value;
         }
 
         private static Message instance;
-        private static string messageText="Message text is not set";
+        private string messageText="Message text is not set";
         private Message() { }
 
 
