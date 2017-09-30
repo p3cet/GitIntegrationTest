@@ -12,11 +12,8 @@ namespace SingletonTest.Controllers
         Message CurrentMessage = Message.Instance;
 
         // GET: Message
-        public ActionResult Index()
-        {
-            return View();
-        }
-
+        public ActionResult Index() => View();
+        
         public ActionResult ViewMessage() 
         {
             ViewBag.MessageText = CurrentMessage.MessageText;
